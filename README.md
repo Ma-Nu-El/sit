@@ -1,23 +1,23 @@
 
 # Table of Contents
 
-1.  ["sit": a simple git suite](#org60b5288)
-        1.  [problem](#orgaa7037c)
-        2.  [current solution](#orgffd766f)
-        3.  [wanted solution](#org86f2570)
-        4.  [how to get there](#org09eb237)
-        5.  [git status part](#org7d7c653)
-        6.  [git commit part](#org5625b1e)
-        7.  [git push part](#org044d451)
+1.  [sit: a simple git suite](#orgc783454)
+        1.  [problem](#orgc4eae23)
+        2.  [current solution](#orgc3ab9a5)
+        3.  [wanted solution](#org4ce957a)
+        4.  [how to get there](#org67ded5a)
+        5.  [git status part](#org1942b7e)
+        6.  [git commit part](#orgdee495c)
+        7.  [git push part](#org2aa049a)
 
 
 
-<a id="org60b5288"></a>
+<a id="orgc783454"></a>
 
-# "sit": a simple git suite
+# sit: a simple git suite
 
 
-<a id="orgaa7037c"></a>
+<a id="orgc4eae23"></a>
 
 ### problem
 
@@ -25,7 +25,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgffd766f"></a>
+<a id="orgc3ab9a5"></a>
 
 ### current solution
 
@@ -39,7 +39,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org86f2570"></a>
+<a id="org4ce957a"></a>
 
 ### wanted solution
 
@@ -57,7 +57,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org09eb237"></a>
+<a id="org67ded5a"></a>
 
 ### how to get there
 
@@ -81,7 +81,7 @@ directories at once.
     }
 
 
-<a id="org7d7c653"></a>
+<a id="org1942b7e"></a>
 
 ### git status part
 
@@ -100,7 +100,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org5625b1e"></a>
+<a id="orgdee495c"></a>
 
 ### git commit part
 
@@ -119,7 +119,7 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="org044d451"></a>
+<a id="org2aa049a"></a>
 
 ### git push part
 
