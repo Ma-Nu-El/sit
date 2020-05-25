@@ -1,20 +1,19 @@
 
 # Table of Contents
 
-1.  [sit: a simple repo manager for git](#org339e7f5)
-2.  [sit: a simple repo manager for git](#orgb267d56)
-3.  [problem](#org74c3271)
-4.  [current solution](#org3bd0247)
-5.  [wanted solution](#orgdf4ae13)
-6.  [how to get there](#org6ca2321)
-    1.  [git status part](#orgf279092)
-    2.  [git commit part](#org66b67e2)
-    3.  [git push part](#org45700a4)
-    4.  [git pull part](#orgd2300e8)
+1.  [sit: a simple repo manager for git](#orgdad839e)
+2.  [problem](#org60e2b45)
+3.  [current solution](#orga794051)
+4.  [wanted solution](#orgd88f95c)
+5.  [how to get there](#org8f54f87)
+    1.  [git status part](#org01a9616)
+    2.  [git commit part](#org95f3c7c)
+    3.  [git push part](#org4679bd7)
+    4.  [git pull part](#org4b7b448)
 
 
 
-<a id="org339e7f5"></a>
+<a id="orgdad839e"></a>
 
 # sit: a simple repo manager for git
 
@@ -23,12 +22,7 @@
 > Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="orgb267d56"></a>
-
-# sit: a simple repo manager for git
-
-
-<a id="org74c3271"></a>
+<a id="org60e2b45"></a>
 
 # problem
 
@@ -36,7 +30,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="org3bd0247"></a>
+<a id="orga794051"></a>
 
 # current solution
 
@@ -50,7 +44,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="orgdf4ae13"></a>
+<a id="orgd88f95c"></a>
 
 # wanted solution
 
@@ -68,7 +62,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org6ca2321"></a>
+<a id="org8f54f87"></a>
 
 # how to get there
 
@@ -92,7 +86,7 @@ directories at once.
     }
 
 
-<a id="orgf279092"></a>
+<a id="org01a9616"></a>
 
 ## git status part
 
@@ -111,7 +105,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org66b67e2"></a>
+<a id="org95f3c7c"></a>
 
 ## git commit part
 
@@ -130,14 +124,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="org45700a4"></a>
+<a id="org4679bd7"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="orgd2300e8"></a>
+<a id="org4b7b448"></a>
 
 ## git pull part
 
