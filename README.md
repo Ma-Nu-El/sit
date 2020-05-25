@@ -1,23 +1,24 @@
 
 # Table of Contents
 
-1.  [sit: a simple suite for git](#org4f8a5f0)
-2.  [problem](#orgd431c32)
-3.  [current solution](#org84d0607)
-4.  [wanted solution](#orgd08f649)
-5.  [how to get there](#org63e21ab)
-    1.  [git status part](#org84a10df)
-    2.  [git commit part](#org4bc5424)
-    3.  [git push part](#orgb5eb0bd)
+1.  [sit: a simple suite for git](#org55d275b)
+2.  [problem](#org7d2bab9)
+3.  [current solution](#orgfeb6dac)
+4.  [wanted solution](#orgb5a7e11)
+5.  [how to get there](#org01eaa5f)
+    1.  [git status part](#org7dc40a6)
+    2.  [git commit part](#org6dac3e2)
+    3.  [git push part](#orgfb6d901)
+    4.  [git pull part](#org3380882)
 
 
 
-<a id="org4f8a5f0"></a>
+<a id="org55d275b"></a>
 
 # sit: a simple suite for git
 
 
-<a id="orgd431c32"></a>
+<a id="org7d2bab9"></a>
 
 # problem
 
@@ -25,7 +26,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="org84d0607"></a>
+<a id="orgfeb6dac"></a>
 
 # current solution
 
@@ -39,7 +40,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="orgd08f649"></a>
+<a id="orgb5a7e11"></a>
 
 # wanted solution
 
@@ -57,7 +58,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org63e21ab"></a>
+<a id="org01eaa5f"></a>
 
 # how to get there
 
@@ -81,7 +82,7 @@ directories at once.
     }
 
 
-<a id="org84a10df"></a>
+<a id="org7dc40a6"></a>
 
 ## git status part
 
@@ -100,7 +101,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org4bc5424"></a>
+<a id="org6dac3e2"></a>
 
 ## git commit part
 
@@ -119,9 +120,16 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="orgb5eb0bd"></a>
+<a id="orgfb6d901"></a>
 
 ## git push part
+
+Same idea for the commit part.
+
+
+<a id="org3380882"></a>
+
+## git pull part
 
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
