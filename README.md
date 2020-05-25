@@ -1,20 +1,23 @@
 
 # Table of Contents
 
-1.  [sit: a simple suite for git](#orga8886a6)
-        1.  [problem](#org0bf2881)
-        2.  [current solution](#org2128eba)
-        3.  [wanted solution](#org4bc9ee5)
-        4.  [how to get there](#org3ab2d29)
+1.  [sit: a simple suite for git](#org9bd8e8f)
+        1.  [problem](#org3e284b3)
+        2.  [current solution](#orge97cd26)
+        3.  [wanted solution](#orgfe6f891)
+        4.  [how to get there](#orgc17880b)
+        5.  [test header](#orgddaef54)
+        6.  [aoeuh tnao](#org9e1c742)
+        7.  [aoeunt ae](#org7166132)
 
 
 
-<a id="orga8886a6"></a>
+<a id="org9bd8e8f"></a>
 
 # sit: a simple suite for git
 
 
-<a id="org0bf2881"></a>
+<a id="org3e284b3"></a>
 
 ### problem
 
@@ -22,7 +25,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="org2128eba"></a>
+<a id="orge97cd26"></a>
 
 ### current solution
 
@@ -36,7 +39,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org4bc9ee5"></a>
+<a id="orgfe6f891"></a>
 
 ### wanted solution
 
@@ -54,7 +57,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org3ab2d29"></a>
+<a id="orgc17880b"></a>
 
 ### how to get there
 
@@ -115,4 +118,25 @@ directories at once.
     pulling is not the same process as committing and pushing. So for the
     moment no implementation for pushing. But if I wanted, the algorithm
     should be very much like the commit and push part.
+
+4.  
+
+
+<a id="orgddaef54"></a>
+
+### test header
+
+1.  testsaoeth
+
+
+<a id="org9e1c742"></a>
+
+### aoeuh tnao
+
+1.  anstoeuhsatn oe
+
+
+<a id="org7166132"></a>
+
+### aoeunt ae
 
