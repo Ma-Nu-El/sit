@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [sit: a simple repo manager for git](#org0e82d48)
-2.  [problem](#orgefe8de7)
-3.  [current solution](#orgd34d49b)
-4.  [wanted solution](#orgcaed530)
-5.  [how to get there](#orge23d6cd)
-    1.  [git status part](#org7bb8512)
-    2.  [git commit part](#orgd4c7ab8)
-    3.  [git push part](#org206b087)
-    4.  [git pull part](#org4a7faed)
+1.  [sit: a simple repo manager for git](#org5cc3c3e)
+2.  [problem](#org6b32068)
+3.  [current solution](#org96d93b0)
+4.  [wanted solution](#org2ed65fb)
+5.  [how to get there](#orgb54dad9)
+    1.  [git status part](#org67620ab)
+    2.  [git commit part](#orgef02ddb)
+    3.  [git push part](#org98c30bd)
+    4.  [git pull part](#orgdc24590)
 
 
 
-<a id="org0e82d48"></a>
+<a id="org5cc3c3e"></a>
 
 # sit: a simple repo manager for git
 
@@ -22,7 +22,7 @@ The source code for the Markdown and the actual executable file is the
 Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="orgefe8de7"></a>
+<a id="org6b32068"></a>
 
 # problem
 
@@ -30,7 +30,7 @@ I type too much just to commit and push in different git repositories
 in my machine.
 
 
-<a id="orgd34d49b"></a>
+<a id="org96d93b0"></a>
 
 # current solution
 
@@ -63,7 +63,7 @@ forgotten those. It's annoying.
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="orgcaed530"></a>
+<a id="org2ed65fb"></a>
 
 # wanted solution
 
@@ -80,7 +80,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="orge23d6cd"></a>
+<a id="orgb54dad9"></a>
 
 # how to get there
 
@@ -104,7 +104,7 @@ directories at once.
     }
 
 
-<a id="org7bb8512"></a>
+<a id="org67620ab"></a>
 
 ## git status part
 
@@ -123,7 +123,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="orgd4c7ab8"></a>
+<a id="orgef02ddb"></a>
 
 ## git commit part
 
@@ -142,19 +142,19 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="org206b087"></a>
+<a id="org98c30bd"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="org4a7faed"></a>
+<a id="orgdc24590"></a>
 
 ## git pull part
 
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
-moment no implementation for pushing. But if I wanted, the algorithm
+moment no implementation for pulling. But if I wanted, the algorithm
 should be very much like the commit and push part.
 

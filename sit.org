@@ -94,7 +94,6 @@ directories at once.
   }
 #+end_src
 
-
 ** git status part
 
 Next thing is to collect the output of ~git status~ performed in every
@@ -132,7 +131,8 @@ using your appropriate message, just as we've always done.
 Same idea for the commit part.
 
 ** git pull part
+
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
-moment no implementation for pushing. But if I wanted, the algorithm
+moment no implementation for pulling. But if I wanted, the algorithm
 should be very much like the commit and push part.
