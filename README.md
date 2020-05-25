@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [sit: a simple git suite](#org6b2aa53)
-        1.  [problem](#orgd4ef0e0)
-        2.  [current solution](#orgdf736e4)
-        3.  [wanted solution](#org5971b41)
-        4.  [how to get there](#org25c7ba0)
+1.  [sit: a simple suite for git](#orga8886a6)
+        1.  [problem](#org0bf2881)
+        2.  [current solution](#org2128eba)
+        3.  [wanted solution](#org4bc9ee5)
+        4.  [how to get there](#org3ab2d29)
 
 
 
-<a id="org6b2aa53"></a>
+<a id="orga8886a6"></a>
 
-# sit: a simple git suite
+# sit: a simple suite for git
 
 
-<a id="orgd4ef0e0"></a>
+<a id="org0bf2881"></a>
 
 ### problem
 
@@ -22,7 +22,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgdf736e4"></a>
+<a id="org2128eba"></a>
 
 ### current solution
 
@@ -36,7 +36,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org5971b41"></a>
+<a id="org4bc9ee5"></a>
 
 ### wanted solution
 
@@ -54,7 +54,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org25c7ba0"></a>
+<a id="org3ab2d29"></a>
 
 ### how to get there
 
