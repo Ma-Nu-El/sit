@@ -1,0 +1,5 @@
+#!/usr/share/env bash
+declare -A repositories
+sit-add(){
+repositories+=($1)
+}
