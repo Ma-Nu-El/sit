@@ -1,6 +1,6 @@
 #+EXPORT_FILE_NAME: README.md
 
-* sit: a simple suite for git 
+* sit: a simple manager for git repos
 * problem
 I type too much just to commit and push in sparse git repositories in
 my machine.

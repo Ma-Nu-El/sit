@@ -1,24 +1,24 @@
 
 # Table of Contents
 
-1.  [sit: a simple suite for git](#org55d275b)
-2.  [problem](#org7d2bab9)
-3.  [current solution](#orgfeb6dac)
-4.  [wanted solution](#orgb5a7e11)
-5.  [how to get there](#org01eaa5f)
-    1.  [git status part](#org7dc40a6)
-    2.  [git commit part](#org6dac3e2)
-    3.  [git push part](#orgfb6d901)
-    4.  [git pull part](#org3380882)
+1.  [sit: a simple manager for git repos](#org90abe73)
+2.  [problem](#org4297a45)
+3.  [current solution](#org0f1b482)
+4.  [wanted solution](#org66bd824)
+5.  [how to get there](#org5cc492a)
+    1.  [git status part](#org9d35480)
+    2.  [git commit part](#org27c99d1)
+    3.  [git push part](#org376687e)
+    4.  [git pull part](#orgc74b5d5)
 
 
 
-<a id="org55d275b"></a>
+<a id="org90abe73"></a>
 
-# sit: a simple suite for git
+# sit: a simple manager for git repos
 
 
-<a id="org7d2bab9"></a>
+<a id="org4297a45"></a>
 
 # problem
 
@@ -26,7 +26,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgfeb6dac"></a>
+<a id="org0f1b482"></a>
 
 # current solution
 
@@ -40,7 +40,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="orgb5a7e11"></a>
+<a id="org66bd824"></a>
 
 # wanted solution
 
@@ -58,7 +58,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org01eaa5f"></a>
+<a id="org5cc492a"></a>
 
 # how to get there
 
@@ -82,7 +82,7 @@ directories at once.
     }
 
 
-<a id="org7dc40a6"></a>
+<a id="org9d35480"></a>
 
 ## git status part
 
@@ -101,7 +101,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org6dac3e2"></a>
+<a id="org27c99d1"></a>
 
 ## git commit part
 
@@ -120,14 +120,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="orgfb6d901"></a>
+<a id="org376687e"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="org3380882"></a>
+<a id="orgc74b5d5"></a>
 
 ## git pull part
 
