@@ -60,8 +60,7 @@ repositories+=($1)
 #+end_src
 
 
-
-*** git status part
+**** git status part
 
 Next thing is to collect the output of ~git status~ performed in every
 single repo and display that collected info in just one message. The
@@ -79,7 +78,7 @@ yourRepo1/
 - blah blah balh
 #+end_example
 
-*** git commit part
+**** git commit part
 
 Here's when you need more flexibility. There are usually two
 scenarios:
@@ -94,7 +93,7 @@ message shared for every repo.
 For the second option, you just ~cd~ into every repo and ~commit~
 using your appropriate message, just as we've always done.
 
-*** git push part
+**** git push part
 
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the

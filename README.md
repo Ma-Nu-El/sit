@@ -1,23 +1,20 @@
 
 # Table of Contents
 
-1.  [sit: a simple git suite](#orgc783454)
-        1.  [problem](#orgc4eae23)
-        2.  [current solution](#orgc3ab9a5)
-        3.  [wanted solution](#org4ce957a)
-        4.  [how to get there](#org67ded5a)
-        5.  [git status part](#org1942b7e)
-        6.  [git commit part](#orgdee495c)
-        7.  [git push part](#org2aa049a)
+1.  [sit: a simple git suite](#org6b2aa53)
+        1.  [problem](#orgd4ef0e0)
+        2.  [current solution](#orgdf736e4)
+        3.  [wanted solution](#org5971b41)
+        4.  [how to get there](#org25c7ba0)
 
 
 
-<a id="orgc783454"></a>
+<a id="org6b2aa53"></a>
 
 # sit: a simple git suite
 
 
-<a id="orgc4eae23"></a>
+<a id="orgd4ef0e0"></a>
 
 ### problem
 
@@ -25,7 +22,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgc3ab9a5"></a>
+<a id="orgdf736e4"></a>
 
 ### current solution
 
@@ -39,7 +36,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org4ce957a"></a>
+<a id="org5971b41"></a>
 
 ### wanted solution
 
@@ -57,7 +54,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org67ded5a"></a>
+<a id="org25c7ba0"></a>
 
 ### how to get there
 
@@ -80,51 +77,42 @@ directories at once.
     repositories+=($1)
     }
 
+1.  git status part
 
-<a id="org1942b7e"></a>
-
-### git status part
-
-Next thing is to collect the output of `git status` performed in every
-single repo and display that collected info in just one message. The
-info of that message should contain the repo location followed by the
-actual output of that `git status` command performed in that repo. And
-repeat for every repo location.
-
-    yourRepo1/
-    - changes not staged for commit
-    - blah blah balh
+    Next thing is to collect the output of `git status` performed in every
+    single repo and display that collected info in just one message. The
+    info of that message should contain the repo location followed by the
+    actual output of that `git status` command performed in that repo. And
+    repeat for every repo location.
     
-    yourRepo1/
-    - changes not staged for commit
-    - blah blah balh
+        yourRepo1/
+        - changes not staged for commit
+        - blah blah balh
+        
+        yourRepo1/
+        - changes not staged for commit
+        - blah blah balh
 
+2.  git commit part
 
-<a id="orgdee495c"></a>
+    Here's when you need more flexibility. There are usually two
+    scenarios:
+    
+    -   you want to commit everything at once, sharing the commit message.
+    -   you've made changes related to different things and you need
+        different commit messages.
+    
+    For the first option, the algorithm to commit should be the same as
+    the `git status` algorithm, except that now you have to input a commit
+    message shared for every repo.
+    
+    For the second option, you just `cd` into every repo and `commit`
+    using your appropriate message, just as we've always done.
 
-### git commit part
+3.  git push part
 
-Here's when you need more flexibility. There are usually two
-scenarios:
-
--   you want to commit everything at once, sharing the commit message.
--   you've made changes related to different things and you need
-    different commit messages.
-
-For the first option, the algorithm to commit should be the same as
-the `git status` algorithm, except that now you have to input a commit
-message shared for every repo.
-
-For the second option, you just `cd` into every repo and `commit`
-using your appropriate message, just as we've always done.
-
-
-<a id="org2aa049a"></a>
-
-### git push part
-
-Since I don't have the same repos across different machines, the
-pulling is not the same process as committing and pushing. So for the
-moment no implementation for pushing. But if I wanted, the algorithm
-should be very much like the commit and push part.
+    Since I don't have the same repos across different machines, the
+    pulling is not the same process as committing and pushing. So for the
+    moment no implementation for pushing. But if I wanted, the algorithm
+    should be very much like the commit and push part.
 
