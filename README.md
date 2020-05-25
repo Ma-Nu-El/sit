@@ -1,20 +1,23 @@
 
 # Table of Contents
 
-1.  ["sit": git suite](#org5abdf01)
-        1.  [problem](#org28fe776)
-        2.  [current solution](#org2db6ddc)
-        3.  [wanted solution](#org85d4ab3)
-        4.  [how to get there](#org23e0e66)
+1.  ["sit": a simple git suite](#org60b5288)
+        1.  [problem](#orgaa7037c)
+        2.  [current solution](#orgffd766f)
+        3.  [wanted solution](#org86f2570)
+        4.  [how to get there](#org09eb237)
+        5.  [git status part](#org7d7c653)
+        6.  [git commit part](#org5625b1e)
+        7.  [git push part](#org044d451)
 
 
 
-<a id="org5abdf01"></a>
+<a id="org60b5288"></a>
 
-# "sit": git suite
+# "sit": a simple git suite
 
 
-<a id="org28fe776"></a>
+<a id="orgaa7037c"></a>
 
 ### problem
 
@@ -22,7 +25,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="org2db6ddc"></a>
+<a id="orgffd766f"></a>
 
 ### current solution
 
@@ -36,7 +39,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org85d4ab3"></a>
+<a id="org86f2570"></a>
 
 ### wanted solution
 
@@ -54,7 +57,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org23e0e66"></a>
+<a id="org09eb237"></a>
 
 ### how to get there
 
@@ -65,19 +68,22 @@ locations of the different git repos; the locations should always be
 the same across machines and the same relative to the `$HOME`
 directory.
 
-declare -A repositories
+    declare -A repositories
 
 Then I have to add the locations of these git repos.
 
 I could use something like "`sit add`". For the first time, it has to
-be manually done. And as well, you can add multiple directories at
-once.
+be manually done. And as well, you should be able to add multiple
+directories at once.
 
-sit-add(){
-repositories+=($1)
-}
+    sit-add(){
+    repositories+=($1)
+    }
 
-git status part
+
+<a id="org7d7c653"></a>
+
+### git status part
 
 Next thing is to collect the output of `git status` performed in every
 single repo and display that collected info in just one message. The
@@ -93,7 +99,10 @@ repeat for every repo location.
     - changes not staged for commit
     - blah blah balh
 
-git commit part
+
+<a id="org5625b1e"></a>
+
+### git commit part
 
 Here's when you need more flexibility. There are usually two
 scenarios:
@@ -109,6 +118,13 @@ message shared for every repo.
 For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
-git push part
-same procedure for commit, flexibility.
+
+<a id="org044d451"></a>
+
+### git push part
+
+Since I don't have the same repos across different machines, the
+pulling is not the same process as committing and pushing. So for the
+moment no implementation for pushing. But if I wanted, the algorithm
+should be very much like the commit and push part.
 
