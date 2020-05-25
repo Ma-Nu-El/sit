@@ -1,9 +1,9 @@
 #+EXPORT_FILE_NAME: README.md
+#+PROPERTY: 
+
+
 
 * sit: a simple suite for git 
-:PROPERTIES:
-:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
-:END:
 * problem
 I type too much just to commit and push in sparse git repositories in
 my machine.
@@ -34,6 +34,10 @@ In the same way, I could ~push~ with one command or push from each
 one, I want to have that flexibility also.
 
 * how to get there
+:PROPERTIES:
+:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
+:END:
+
 
 Usually, I have to remember where are these repos located.
 
@@ -102,12 +106,3 @@ should be very much like the commit and push part.
 
 ** 
 
-* test header
-
-** testsaoeth
-
-* aoeuh tnao
-
-** anstoeuhsatn oe 
-
-* aoeunt ae
