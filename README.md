@@ -1,28 +1,28 @@
 
 # Table of Contents
 
-1.  [sit: a simple manager for git repos](#org1a2b856)
-2.  [problem](#org80a7118)
-3.  [current solution](#orgdc47ec2)
-4.  [wanted solution](#org8d2ee5e)
-5.  [how to get there](#org671f2aa)
-    1.  [git status part](#orgf73d350)
-    2.  [git commit part](#org1c7ca04)
-    3.  [git push part](#orgb79e66c)
-    4.  [git pull part](#org4199b12)
+1.  [sit: a simple manager for git repos](#orgd66d4a0)
+2.  [problem](#org56841e8)
+3.  [current solution](#org0939383)
+4.  [wanted solution](#org5f00f3c)
+5.  [how to get there](#org53c7736)
+    1.  [git status part](#orge4c128c)
+    2.  [git commit part](#org786d26f)
+    3.  [git push part](#orgc191fee)
+    4.  [git pull part](#org333c964)
 
 
 
-<a id="org1a2b856"></a>
+<a id="orgd66d4a0"></a>
 
 # sit: a simple manager for git repos
 
-The source code for the Markdown and the actual executable file is the
-`.org` file itself. I just *tangle* the `sit` file and *export* to
-Markdown using *Orgmode's* `C-c C-e m m`.
+> The source code for the Markdown and the actual executable file is the
+> `.org` file itself. I just *tangle* the `sit` file and *export* to
+> Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="org80a7118"></a>
+<a id="org56841e8"></a>
 
 # problem
 
@@ -30,7 +30,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgdc47ec2"></a>
+<a id="org0939383"></a>
 
 # current solution
 
@@ -44,7 +44,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org8d2ee5e"></a>
+<a id="org5f00f3c"></a>
 
 # wanted solution
 
@@ -62,7 +62,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org671f2aa"></a>
+<a id="org53c7736"></a>
 
 # how to get there
 
@@ -86,7 +86,7 @@ directories at once.
     }
 
 
-<a id="orgf73d350"></a>
+<a id="orge4c128c"></a>
 
 ## git status part
 
@@ -105,7 +105,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org1c7ca04"></a>
+<a id="org786d26f"></a>
 
 ## git commit part
 
@@ -124,14 +124,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="orgb79e66c"></a>
+<a id="orgc191fee"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="org4199b12"></a>
+<a id="org333c964"></a>
 
 ## git pull part
 
