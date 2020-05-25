@@ -1,8 +1,8 @@
 #+EXPORT_FILE_NAME: README.md
 
-* "sit": git suite
+* "sit": a simple git suite
 :PROPERTIES:
-:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ../sit
+:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
 :END:
 *** problem
 I type too much just to commit and push in sparse git repositories in
@@ -42,18 +42,22 @@ locations of the different git repos; the locations should always be
 the same across machines and the same relative to the ~$HOME~
 directory.
 
+#+begin_src shell
 declare -A repositories
+#+end_src
 
 Then I have to add the locations of these git repos.
 
 I could use something like "~sit add~". For the first time, it has to
-be manually done. And as well, you can add multiple directories at
-once.
+be manually done. And as well, you should be able to add multiple
+directories at once.
 
 
+#+begin_src shell
 sit-add(){
 repositories+=($1)
 }
+#+end_src
 
 
 
