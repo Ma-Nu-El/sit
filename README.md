@@ -1,29 +1,23 @@
 
 # Table of Contents
 
-1.  [sit: a simple suite for git](#org0dba135)
-2.  [problem](#org5f9e1a1)
-3.  [current solution](#org2a647f6)
-4.  [wanted solution](#org6e919ee)
-5.  [how to get there](#org3661b1b)
-    1.  [git status part](#orgbb8271f)
-    2.  [git commit part](#org69fdae9)
-    3.  [git push part](#org0f4c8ea)
-    4.  [](#org8ae018a)
-6.  [test header](#org7f9e615)
-    1.  [testsaoeth](#org92d47be)
-7.  [aoeuh tnao](#orgfe16e04)
-    1.  [anstoeuhsatn oe](#org0b39a1f)
-8.  [aoeunt ae](#org9dfc3fd)
+1.  [sit: a simple suite for git](#org4f8a5f0)
+2.  [problem](#orgd431c32)
+3.  [current solution](#org84d0607)
+4.  [wanted solution](#orgd08f649)
+5.  [how to get there](#org63e21ab)
+    1.  [git status part](#org84a10df)
+    2.  [git commit part](#org4bc5424)
+    3.  [git push part](#orgb5eb0bd)
 
 
 
-<a id="org0dba135"></a>
+<a id="org4f8a5f0"></a>
 
 # sit: a simple suite for git
 
 
-<a id="org5f9e1a1"></a>
+<a id="orgd431c32"></a>
 
 # problem
 
@@ -31,7 +25,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="org2a647f6"></a>
+<a id="org84d0607"></a>
 
 # current solution
 
@@ -45,7 +39,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org6e919ee"></a>
+<a id="orgd08f649"></a>
 
 # wanted solution
 
@@ -63,7 +57,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="org3661b1b"></a>
+<a id="org63e21ab"></a>
 
 # how to get there
 
@@ -87,7 +81,7 @@ directories at once.
     }
 
 
-<a id="orgbb8271f"></a>
+<a id="org84a10df"></a>
 
 ## git status part
 
@@ -106,7 +100,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org69fdae9"></a>
+<a id="org4bc5424"></a>
 
 ## git commit part
 
@@ -125,7 +119,7 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="org0f4c8ea"></a>
+<a id="orgb5eb0bd"></a>
 
 ## git push part
 
@@ -133,34 +127,4 @@ Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
 moment no implementation for pushing. But if I wanted, the algorithm
 should be very much like the commit and push part.
-
-
-<a id="org8ae018a"></a>
-
-## 
-
-
-<a id="org7f9e615"></a>
-
-# test header
-
-
-<a id="org92d47be"></a>
-
-## testsaoeth
-
-
-<a id="orgfe16e04"></a>
-
-# aoeuh tnao
-
-
-<a id="org0b39a1f"></a>
-
-## anstoeuhsatn oe
-
-
-<a id="org9dfc3fd"></a>
-
-# aoeunt ae
 
