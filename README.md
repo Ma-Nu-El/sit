@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [sit: a simple repo manager for git](#org416ea6c)
-2.  [problem](#orgc42b640)
-3.  [current solution](#orgda335c6)
-4.  [wanted solution](#org3812551)
-5.  [how to get there](#orgc5877cf)
-    1.  [git status part](#org8602d31)
-    2.  [git commit part](#org9cfa89f)
-    3.  [git push part](#orgae963ec)
-    4.  [git pull part](#orga426574)
+1.  [sit: a simple repo manager for git](#orgac46286)
+2.  [problem](#orgc2cb736)
+3.  [current solution](#orgbfd23c1)
+4.  [wanted solution](#org2393394)
+5.  [how to get there](#orgd8de765)
+    1.  [git status part](#org5267b11)
+    2.  [git commit part](#org60db6e5)
+    3.  [git push part](#orgbaadbc4)
+    4.  [git pull part](#org9cd9ccf)
 
 
 
-<a id="org416ea6c"></a>
+<a id="orgac46286"></a>
 
 # sit: a simple repo manager for git
 
@@ -22,7 +22,7 @@ The source code for the Markdown and the actual executable file is the
 Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="orgc42b640"></a>
+<a id="orgc2cb736"></a>
 
 # problem
 
@@ -30,7 +30,7 @@ I type too much just to commit and push in sparse git repositories in
 my machine.
 
 
-<a id="orgda335c6"></a>
+<a id="orgbfd23c1"></a>
 
 # current solution
 
@@ -44,7 +44,7 @@ push`. This workflow is a problem because:
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org3812551"></a>
+<a id="org2393394"></a>
 
 # wanted solution
 
@@ -62,7 +62,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="orgc5877cf"></a>
+<a id="orgd8de765"></a>
 
 # how to get there
 
@@ -86,7 +86,7 @@ directories at once.
     }
 
 
-<a id="org8602d31"></a>
+<a id="org5267b11"></a>
 
 ## git status part
 
@@ -105,7 +105,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org9cfa89f"></a>
+<a id="org60db6e5"></a>
 
 ## git commit part
 
@@ -124,14 +124,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="orgae963ec"></a>
+<a id="orgbaadbc4"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="orga426574"></a>
+<a id="org9cd9ccf"></a>
 
 ## git pull part
 
