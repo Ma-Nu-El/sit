@@ -1,3 +1,5 @@
+#+EXPORT_FILE_NAME: README.md
+
 * "sit": git suite
 :PROPERTIES:
 :header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ../sit
