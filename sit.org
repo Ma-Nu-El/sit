@@ -1,6 +1,7 @@
-#+EXPORT_FILE_NAME: README.md
-
-* sit: a simple manager for git repos
+# Created 2020-05-24 dom 22:13
+#+TITLE: Sit: a simple repo manager for git
+#+AUTHOR: ma
+#+export_file_name: README.md
 
 #+begin_quote
 The source code for the Markdown and the actual executable file is the
@@ -38,11 +39,6 @@ In the same way, I could ~push~ with one command or push from each
 one, I want to have that flexibility also.
 
 * how to get there
-:PROPERTIES:
-:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
-:END:
-
-
 Usually, I have to remember where are these repos located.
 
 That can be solved using a simple array variable to store the
@@ -51,7 +47,7 @@ the same across machines and the same relative to the ~$HOME~
 directory.
 
 #+begin_src shell
-declare -A repositories
+  declare -A repositories
 #+end_src
 
 Then I have to add the locations of these git repos.
@@ -62,9 +58,9 @@ directories at once.
 
 
 #+begin_src shell
-sit-add(){
-repositories+=($1)
-}
+  sit-add(){
+  repositories+=($1)
+  }
 #+end_src
 
 
@@ -77,13 +73,13 @@ actual output of that ~git status~ command performed in that repo. And
 repeat for every repo location.
 
 #+begin_example
-yourRepo1/
-- changes not staged for commit
-- blah blah balh
+  yourRepo1/
+  - changes not staged for commit
+  - blah blah balh
 
-yourRepo1/
-- changes not staged for commit
-- blah blah balh
+  yourRepo1/
+  - changes not staged for commit
+  - blah blah balh
 #+end_example
 
 ** git commit part
@@ -93,7 +89,7 @@ scenarios:
 - you want to commit everything at once, sharing the commit message.
 - you've made changes related to different things and you need
   different commit messages.
-  
+
 For the first option, the algorithm to commit should be the same as
 the ~git status~ algorithm, except that now you have to input a commit
 message shared for every repo.
