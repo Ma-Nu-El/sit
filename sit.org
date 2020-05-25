@@ -2,8 +2,6 @@
 :PROPERTIES:
 :header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ../sit
 :END:
-** Info source
-
 *** problem
 I type too much just to commit and push in sparse git repositories in
 my machine.
