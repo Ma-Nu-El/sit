@@ -10,16 +10,44 @@ The source code for the Markdown and the actual executable file is the
 Markdown using /Orgmode's/ ~C-c C-e m m~.
 
 * problem
-I type too much just to commit and push in sparse git repositories in
-my machine.
+
+I type too much just to commit and push in different git repositories
+in my machine.
+
 * current solution
 
-I have to ~cd~ into every git repo, which by the way I have to remember
-what are they and where are they and only then ~git commit~ and ~git
-push~. This workflow is a problem because:
+I have to ~cd~ into every git repo - which by the way have to remember
+its location every time for every repo -.
+
+From here I usually do one of the two following actions:
+
+1. Copy the commit message and paste it on the next commit of all the
+   other git repos.
+
+#+begin_comment
+Even if the repos are generally not related, sometimes the commit
+itself might involve other repositories, for example dotfiles and some
+other particular project. Thus, it's only logical for the commit
+message to be the same and it's effectively what I usually do.
+#+end_comment
+
+2. Push.
+
+Maybe I haven't pushed up the different git repos and now after
+committing in each repo (related or not) I want to push them up. That
+involves ~cd~ =<insertGitRepoLocation>= and then ~git push~ and repeat
+again for every repo.
+
+This workflow is a problem because:
 
 - I have to remember where are all these different repos
-- Since I have these repos scattered in multiple locations in
+
+Note that the number of repos is highly variable, so getting used to
+remember some locations is not an option since you could easily forget
+that particular little test repo you needed to commit/push. I have
+forgotten those. It's annoying.
+
+- Since I have these repos scattered in multiple directories in
   multiple machines, it's very error prone
 - git submodules/subtree/subrepos are way too complex for what I need
 
@@ -29,9 +57,8 @@ If I'm in the ~$HOME~ folder, then just ~git status~ right from the
 ~$HOME~ directory only to be aware of the changes made to the
 different present git repos.
 
-Then, if I'm in the ~$HOME~ directory and ~git commit~ right from
-there, I'd be committing every change to its corresponding git repo
-with the same message. Very much as if I ~cd~ into every repo and ~git
+I'd be committing every change to its corresponding git repo with the
+same message. Very much as if I ~cd~ into every repo and ~git
 commit~ right from each one manually; as already explained it's an
 error prone and cumbersome way to do.
 
