@@ -95,10 +95,10 @@ For the second option, you just ~cd~ into every repo and ~commit~
 using your appropriate message, just as we've always done.
 
 ** git push part
+Same idea for the commit part.
 
+** git pull part
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
 moment no implementation for pushing. But if I wanted, the algorithm
 should be very much like the commit and push part.
-
-
