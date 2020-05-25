@@ -4,10 +4,10 @@
 :PROPERTIES:
 :header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
 :END:
-*** problem
+* problem
 I type too much just to commit and push in sparse git repositories in
 my machine.
-*** current solution
+* current solution
 
 I have to ~cd~ into every git repo, which by the way I have to remember
 what are they and where are they and only then ~git commit~ and ~git
@@ -18,7 +18,7 @@ push~. This workflow is a problem because:
   multiple machines, it's very error prone
 - git submodules/subtree/subrepos are way too complex for what I need
 
-*** wanted solution
+* wanted solution
 
 If I'm in the ~$HOME~ folder, then just ~git status~ right from the
 ~$HOME~ directory only to be aware of the changes made to the
@@ -33,7 +33,7 @@ error prone and cumbersome way to do.
 In the same way, I could ~push~ with one command or push from each
 one, I want to have that flexibility also.
 
-*** how to get there
+* how to get there
 
 Usually, I have to remember where are these repos located.
 
@@ -60,7 +60,7 @@ repositories+=($1)
 #+end_src
 
 
-**** git status part
+** git status part
 
 Next thing is to collect the output of ~git status~ performed in every
 single repo and display that collected info in just one message. The
@@ -78,7 +78,7 @@ yourRepo1/
 - blah blah balh
 #+end_example
 
-**** git commit part
+** git commit part
 
 Here's when you need more flexibility. There are usually two
 scenarios:
@@ -93,21 +93,21 @@ message shared for every repo.
 For the second option, you just ~cd~ into every repo and ~commit~
 using your appropriate message, just as we've always done.
 
-**** git push part
+** git push part
 
 Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
 moment no implementation for pushing. But if I wanted, the algorithm
 should be very much like the commit and push part.
 
-**** 
+** 
 
-*** test header
+* test header
 
-**** testsaoeth
+** testsaoeth
 
-***  aoeuh tnao
+* aoeuh tnao
 
-**** anstoeuhsatn oe 
+** anstoeuhsatn oe 
 
-***  aoeunt ae
+* aoeunt ae
