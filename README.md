@@ -1,19 +1,19 @@
 
 # Table of Contents
 
-1.  [sit: a simple repo manager for git](#orgac46286)
-2.  [problem](#orgc2cb736)
-3.  [current solution](#orgbfd23c1)
-4.  [wanted solution](#org2393394)
-5.  [how to get there](#orgd8de765)
-    1.  [git status part](#org5267b11)
-    2.  [git commit part](#org60db6e5)
-    3.  [git push part](#orgbaadbc4)
-    4.  [git pull part](#org9cd9ccf)
+1.  [sit: a simple repo manager for git](#org0e82d48)
+2.  [problem](#orgefe8de7)
+3.  [current solution](#orgd34d49b)
+4.  [wanted solution](#orgcaed530)
+5.  [how to get there](#orge23d6cd)
+    1.  [git status part](#org7bb8512)
+    2.  [git commit part](#orgd4c7ab8)
+    3.  [git push part](#org206b087)
+    4.  [git pull part](#org4a7faed)
 
 
 
-<a id="orgac46286"></a>
+<a id="org0e82d48"></a>
 
 # sit: a simple repo manager for git
 
@@ -22,29 +22,48 @@ The source code for the Markdown and the actual executable file is the
 Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="orgc2cb736"></a>
+<a id="orgefe8de7"></a>
 
 # problem
 
-I type too much just to commit and push in sparse git repositories in
-my machine.
+I type too much just to commit and push in different git repositories
+in my machine.
 
 
-<a id="orgbfd23c1"></a>
+<a id="orgd34d49b"></a>
 
 # current solution
 
-I have to `cd` into every git repo, which by the way I have to remember
-what are they and where are they and only then `git commit` and `git
-push`. This workflow is a problem because:
+I have to `cd` into every git repo - which by the way have to remember
+its location every time for every repo -.
+
+From here I usually do one of the two following actions:
+
+1.  Copy the commit message and paste it on the next commit of all the
+    other git repos.
+
+1.  Push.
+
+Maybe I haven't pushed up the different git repos and now after
+committing in each repo (related or not) I want to push them up. That
+involves `cd` `<insertGitRepoLocation>` and then `git push` and repeat
+again for every repo.
+
+This workflow is a problem because:
 
 -   I have to remember where are all these different repos
--   Since I have these repos scattered in multiple locations in
+
+Note that the number of repos is highly variable, so getting used to
+remember some locations is not an option since you could easily forget
+that particular little test repo you needed to commit/push. I have
+forgotten those. It's annoying.
+
+-   Since I have these repos scattered in multiple directories in
     multiple machines, it's very error prone
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org2393394"></a>
+<a id="orgcaed530"></a>
 
 # wanted solution
 
@@ -52,9 +71,8 @@ If I'm in the `$HOME` folder, then just `git status` right from the
 `$HOME` directory only to be aware of the changes made to the
 different present git repos.
 
-Then, if I'm in the `$HOME` directory and `git commit` right from
-there, I'd be committing every change to its corresponding git repo
-with the same message. Very much as if I `cd` into every repo and `git
+I'd be committing every change to its corresponding git repo with the
+same message. Very much as if I `cd` into every repo and `git
 commit` right from each one manually; as already explained it's an
 error prone and cumbersome way to do.
 
@@ -62,7 +80,7 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="orgd8de765"></a>
+<a id="orge23d6cd"></a>
 
 # how to get there
 
@@ -86,7 +104,7 @@ directories at once.
     }
 
 
-<a id="org5267b11"></a>
+<a id="org7bb8512"></a>
 
 ## git status part
 
@@ -105,7 +123,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="org60db6e5"></a>
+<a id="orgd4c7ab8"></a>
 
 ## git commit part
 
@@ -124,14 +142,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="orgbaadbc4"></a>
+<a id="org206b087"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="org9cd9ccf"></a>
+<a id="org4a7faed"></a>
 
 ## git pull part
 
