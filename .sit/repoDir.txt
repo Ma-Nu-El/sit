@@ -1,0 +1,6 @@
+/sit/sit
+/uni
+/rig
+/home/ma/deploy
+/home/ma/org
+/home/ma/projects
