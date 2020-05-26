@@ -1,38 +1,67 @@
 
 # Table of Contents
 
-1.  [sit: a simple repo manager for git](#org5cc3c3e)
-2.  [problem](#org6b32068)
-3.  [current solution](#org96d93b0)
-4.  [wanted solution](#org2ed65fb)
-5.  [how to get there](#orgb54dad9)
-    1.  [git status part](#org67620ab)
-    2.  [git commit part](#orgef02ddb)
-    3.  [git push part](#org98c30bd)
-    4.  [git pull part](#orgdc24590)
+1.  [sit: a simple repo manager for git](#org722e6ba)
+    1.  [preamble](#org52ab662)
+    2.  [Kind of licensing?](#org23bba54)
+2.  [problem [why bother in the first place]](#orgc99bee8)
+3.  [current solution [way too inefficient]](#org151c7a3)
+4.  [wanted solution [maybe too good?]](#orgfb561cf)
+5.  [how to get there [middle term once again?]](#org190ccaf)
+    1.  [add locations](#org4f4236c)
+        1.  [verb](#orgc7ea530)
+        2.  [if](#org6e7fa7d)
+        3.  [fi](#orgd282985)
+    2.  [display the locations](#orgd2b0713)
+        1.  [if](#org7a6651c)
+        2.  [fi](#orgce7ed09)
+    3.  [git status part](#org338517a)
+    4.  [git commit part](#org468a84f)
+    5.  [git push part](#org038bb58)
+    6.  [git pull part](#org3c5f646)
 
 
 
-<a id="org5cc3c3e"></a>
+<a id="org722e6ba"></a>
 
 # sit: a simple repo manager for git
+
+
+<a id="org52ab662"></a>
+
+## preamble
 
 The source code for the Markdown and the actual executable file is the
 `.org` file itself. I just *tangle* the `sit` file and *export* to
 Markdown using *Orgmode's* `C-c C-e m m`.
 
 
-<a id="org6b32068"></a>
+<a id="org23bba54"></a>
 
-# problem
+## Kind of licensing?
+
+By the way, I haven't read about licenses, but I know that I don't
+want to get charged for using this stuff now or in the future, so I
+guess I'd be opting for something like the GPL/MIT/BSD branch.
+
+Please feel free to do whatever you want with this code, I just want
+to type less (and remember less) in order maintain my scattered git
+repositories.
+
+
+<a id="orgc99bee8"></a>
+
+# problem [why bother in the first place]
 
 I type too much just to commit and push in different git repositories
 in my machine.
 
+Plus, it's a nice motive to learn bash.
 
-<a id="org96d93b0"></a>
 
-# current solution
+<a id="org151c7a3"></a>
+
+# current solution [way too inefficient]
 
 I have to `cd` into every git repo - which by the way have to remember
 its location every time for every repo -.
@@ -63,9 +92,9 @@ forgotten those. It's annoying.
 -   git submodules/subtree/subrepos are way too complex for what I need
 
 
-<a id="org2ed65fb"></a>
+<a id="orgfb561cf"></a>
 
-# wanted solution
+# wanted solution [maybe too good?]
 
 If I'm in the `$HOME` folder, then just `git status` right from the
 `$HOME` directory only to be aware of the changes made to the
@@ -80,9 +109,9 @@ In the same way, I could `push` with one command or push from each
 one, I want to have that flexibility also.
 
 
-<a id="orgb54dad9"></a>
+<a id="org190ccaf"></a>
 
-# how to get there
+# how to get there [middle term once again?]
 
 Usually, I have to remember where are these repos located.
 
@@ -91,20 +120,73 @@ locations of the different git repos; the locations should always be
 the same across machines and the same relative to the `$HOME`
 directory.
 
+Something like 
+
     declare -A repositories
 
-Then I have to add the locations of these git repos.
+
+<a id="org4f4236c"></a>
+
+## DONE add locations
+
+
+<a id="orgc7ea530"></a>
+
+### verb
 
 I could use something like "`sit add`". For the first time, it has to
 be manually done. And as well, you should be able to add multiple
 directories at once.
 
-    sit-add(){
-    repositories+=($1)
-    }
+
+<a id="org6e7fa7d"></a>
+
+### if
+
+    if [ $1 == 'add' ]
+    then
+
+    REPO_NAME=$2
+    REPO_DIR=$3
+    echo $REPO_NAME>>repoNam.txt
+    echo $REPO_DIR>>repoDir.txt
 
 
-<a id="org67620ab"></a>
+<a id="orgd282985"></a>
+
+### fi
+
+    fi
+
+
+<a id="orgd2b0713"></a>
+
+## display the locations
+
+
+<a id="org7a6651c"></a>
+
+### if
+
+    if [ $1 == 'ls' ]
+    then
+
+    echo "repo nicknames"
+    cat repoNam.txt
+    echo ""
+    echo "repo locations"
+    cat repoDir.txt
+    echo ""
+
+
+<a id="orgce7ed09"></a>
+
+### fi
+
+    fi
+
+
+<a id="org338517a"></a>
 
 ## git status part
 
@@ -123,7 +205,7 @@ repeat for every repo location.
     - blah blah balh
 
 
-<a id="orgef02ddb"></a>
+<a id="org468a84f"></a>
 
 ## git commit part
 
@@ -142,14 +224,14 @@ For the second option, you just `cd` into every repo and `commit`
 using your appropriate message, just as we've always done.
 
 
-<a id="org98c30bd"></a>
+<a id="org038bb58"></a>
 
 ## git push part
 
 Same idea for the commit part.
 
 
-<a id="orgdc24590"></a>
+<a id="org3c5f646"></a>
 
 ## git pull part
 
