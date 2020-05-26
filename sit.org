@@ -96,7 +96,7 @@ Something like
   declare -A repositories
 #+end_src
 
-** add locations
+** DONE add locations
 *** verb
 I could use something like "~sit add~". For the first time, it has to
 be manually done. And as well, you should be able to add multiple
@@ -111,13 +111,8 @@ then
 #+begin_src shell
 REPO_NAME=$2
 REPO_DIR=$3
-
-REPO_NAME=$2
-REPO_DIR=$3
-
-cat REPO_NAME>>repoNam.txt
-cat REPO_DIR>>repoDir.txt
-
+echo $REPO_NAME>>repoNam.txt
+echo $REPO_DIR>>repoDir.txt
 #+end_src
 
 *** fi
@@ -133,7 +128,12 @@ if [ $1 == 'ls' ]
 then
 #+end_src
 #+begin_src shell
-echo ${repositories[@]}
+echo "repo nicknames"
+cat repoNam.txt
+echo ""
+echo "repo locations"
+cat repoDir.txt
+echo ""
 #+end_src
 
 *** fi

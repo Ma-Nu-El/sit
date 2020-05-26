@@ -4,14 +4,15 @@ if [ $1 == 'add' ]
 then
 REPO_NAME=$2
 REPO_DIR=$3
-
-REPO_NAME=$2
-REPO_DIR=$3
-
-cat REPO_NAME>>repoNam.txt
-cat REPO_DIR>>repoDir.txt
+echo $REPO_NAME>>repoNam.txt
+echo $REPO_DIR>>repoDir.txt
 fi
 if [ $1 == 'ls' ]
 then
-echo ${repositories[@]}
+echo "repo nicknames"
+cat repoNam.txt
+echo ""
+echo "repo locations"
+cat repoDir.txt
+echo ""
 fi
