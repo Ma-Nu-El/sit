@@ -1,5 +1,17 @@
-#!/usr/share/env bash
+#!/usr/bin/env bash
 declare -A repositories
-sit-add(){
-repositories+=($1)
-}
+if [ $1 == 'add' ]
+then
+REPO_NAME=$2
+REPO_DIR=$3
+
+REPO_NAME=$2
+REPO_DIR=$3
+
+cat REPO_NAME>>repoNam.txt
+cat REPO_DIR>>repoDir.txt
+fi
+if [ $1 == 'ls' ]
+then
+echo ${repositories[@]}
+fi

@@ -3,18 +3,31 @@
 #+AUTHOR: ma
 #+export_file_name: README.md
 
+
 * sit: a simple repo manager for git
 
+** preamble
 The source code for the Markdown and the actual executable file is the
 ~.org~ file itself. I just /tangle/ the ~sit~ file and /export/ to
 Markdown using /Orgmode's/ ~C-c C-e m m~.
 
-* problem
+** Kind of licensing?
+By the way, I haven't read about licenses, but I know that I don't
+want to get charged for using this stuff now or in the future, so I
+guess I'd be opting for something like the GPL/MIT/BSD branch.
+ 
+Please feel free to do whatever you want with this code, I just want
+to type less (and remember less) in order maintain my scattered git
+repositories.
+
+* problem [why bother in the first place]
 
 I type too much just to commit and push in different git repositories
 in my machine.
 
-* current solution
+Plus, it's a nice motive to learn bash.
+
+* current solution [way too inefficient]
 
 I have to ~cd~ into every git repo - which by the way have to remember
 its location every time for every repo -.
@@ -51,7 +64,7 @@ forgotten those. It's annoying.
   multiple machines, it's very error prone
 - git submodules/subtree/subrepos are way too complex for what I need
 
-* wanted solution
+* wanted solution [maybe too good?]
 
 If I'm in the ~$HOME~ folder, then just ~git status~ right from the
 ~$HOME~ directory only to be aware of the changes made to the
@@ -65,9 +78,9 @@ error prone and cumbersome way to do.
 In the same way, I could ~push~ with one command or push from each
 one, I want to have that flexibility also.
 
-* how to get there
+* how to get there [middle term once again?]
 :PROPERTIES:
-:header-args: :results silent :padline no :shebang "#!/usr/share/env bash" :tangle ./sit
+:header-args: :results silent :padline no :shebang "#!/usr/bin/env bash" :tangle ./sit
 :END:
 
 Usually, I have to remember where are these repos located.
@@ -77,21 +90,55 @@ locations of the different git repos; the locations should always be
 the same across machines and the same relative to the ~$HOME~
 directory.
 
+Something like 
+
 #+begin_src shell
   declare -A repositories
 #+end_src
 
-Then I have to add the locations of these git repos.
-
+** add locations
+*** verb
 I could use something like "~sit add~". For the first time, it has to
 be manually done. And as well, you should be able to add multiple
 directories at once.
 
+*** if 
+#+begin_src shell
+if [ $1 == 'add' ]
+then
+#+end_src
 
 #+begin_src shell
-  sit-add(){
-  repositories+=($1)
-  }
+REPO_NAME=$2
+REPO_DIR=$3
+
+REPO_NAME=$2
+REPO_DIR=$3
+
+cat REPO_NAME>>repoNam.txt
+cat REPO_DIR>>repoDir.txt
+
+#+end_src
+
+*** fi
+#+begin_src shell
+fi
+#+end_src
+
+** display the locations
+*** if
+
+#+begin_src shell
+if [ $1 == 'ls' ]
+then
+#+end_src
+#+begin_src shell
+echo ${repositories[@]}
+#+end_src
+
+*** fi
+#+begin_src shell
+fi
 #+end_src
 
 ** git status part
@@ -136,3 +183,4 @@ Since I don't have the same repos across different machines, the
 pulling is not the same process as committing and pushing. So for the
 moment no implementation for pulling. But if I wanted, the algorithm
 should be very much like the commit and push part.
+
